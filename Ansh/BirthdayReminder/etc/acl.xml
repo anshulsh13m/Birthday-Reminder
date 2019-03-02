@@ -1,0 +1,15 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+	<acl>
+		<resources>
+			<resource id="Magento_Backend::admin">
+				<resource id="Ansh_BirthdayReminder::BirthdayReminder" sortOrder="10" title="BirthdayReminder">
+					<resource id="Ansh_BirthdayReminder::BirthdayReminder_save" sortOrder="10" title="Save BirthdayReminder"/>
+					<resource id="Ansh_BirthdayReminder::BirthdayReminder_delete" sortOrder="20" title="Delete BirthdayReminder"/>
+					<resource id="Ansh_BirthdayReminder::BirthdayReminder_update" sortOrder="30" title="Update BirthdayReminder"/>
+					<resource id="Ansh_BirthdayReminder::BirthdayReminder_view" sortOrder="40" title="View BirthdayReminder"/>
+				</resource>
+			</resource>
+		</resources>
+	</acl>
+</config>

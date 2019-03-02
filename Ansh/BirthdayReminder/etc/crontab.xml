@@ -1,0 +1,9 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+    <group id="default">
+        <job instance="Ansh\BirthdayReminder\Cron\BirthdayReminder" method="execute" name="ansh_birthdayreminder_cron">
+            <!--Cron set at every 6AM -->
+            <schedule>* 6 * * *</schedule>
+        </job>
+    </group>
+</config>

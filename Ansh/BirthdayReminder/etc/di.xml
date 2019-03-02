@@ -1,0 +1,19 @@
+<?xml version="1.0" ?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+	<preference for="Ansh\BirthdayReminder\Api\BirthdayReminderRepositoryInterface" type="Ansh\BirthdayReminder\Model\BirthdayReminderRepository"/>
+	<preference for="Ansh\BirthdayReminder\Api\Data\BirthdayReminderInterface" type="Ansh\BirthdayReminder\Model\Data\BirthdayReminder"/>
+	<preference for="Ansh\BirthdayReminder\Api\Data\BirthdayReminderSearchResultsInterface" type="Magento\Framework\Api\SearchResults"/>
+	<virtualType name="Ansh\BirthdayReminder\Model\ResourceModel\BirthdayReminder\Grid\Collection" type="Magento\Framework\View\Element\UiComponent\DataProvider\SearchResult">
+		<arguments>
+			<argument name="mainTable" xsi:type="string">ansh_birthdayreminder_birthdayreminder</argument>
+			<argument name="resourceModel" xsi:type="string">Ansh\BirthdayReminder\Model\ResourceModel\BirthdayReminder\Collection</argument>
+		</arguments>
+	</virtualType>
+	<type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+		<arguments>
+			<argument name="collections" xsi:type="array">
+				<item name="ansh_birthdayreminder_birthdayreminder_listing_data_source" xsi:type="string">Ansh\BirthdayReminder\Model\ResourceModel\BirthdayReminder\Grid\Collection</item>
+			</argument>
+		</arguments>
+	</type>
+</config>
